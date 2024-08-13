@@ -1,4 +1,4 @@
-import './resources/assets/scss/common.scss';
+import './assets/scss/common.scss';
 
 function App() {
   return (
