@@ -1,9 +1,11 @@
-import './assets/scss/common.scss';
+import Home from "pages/home";
+import 'assets/scss/common.scss';
+import 'assets/scss/style.scss';
 
 function App() {
   return (
     <div className="App">
-      <div className="flex items-center"></div>
+      <Home />
     </div>
   );
 }
