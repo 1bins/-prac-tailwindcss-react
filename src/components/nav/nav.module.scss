@@ -1,3 +1,24 @@
-.nav-inner {
+@import '../../assets/scss/common.scss';
 
+.nav-inner {
+  width: 16%;
+
+  .gnb {
+    padding: 8.6vh 13.6%;
+    height: $container;
+
+    li {
+      &:nth-child(n+2) {
+        margin-top: 1.5rem;
+      }
+
+      &.active {
+        background: #77c6cb;
+        
+        .menu {
+          color: #fff;
+        }
+      }
+    }
+  }
 }
