@@ -1,29 +1,18 @@
-import {useState} from "react";
+import {Outlet} from "react-router-dom";
+import Nav from "components/nav";
 import classNames from "classnames/bind";
 
-const Layout = () => {
-  // ** aspect-ratio
-  const [aspectRatio, setAspectRatio] = useState('');
-  const getAspectRatioName = (e) => setAspectRatio(e.target.name);
+import style from './layout.module.scss'
+const cx = classNames.bind(style);
 
+const Layout = () => {
   return(
-      <section id="layout" className="flex justify-center">
-        <article>
-          <h4 className="text-4xl">Aspect Ratio</h4>
-          <div className={classNames('bg-blue-500', 'hover:bg-blue-300', aspectRatio)} style={{'width': '100px'}}></div>
-          <ul className="button-list">
-            <li>
-              <button type="button" name="aspect-auto" onClick={getAspectRatioName}>aspect-auto</button>
-            </li>
-            <li>
-              <button type="button" name="aspect-square" onClick={getAspectRatioName}>aspect-square</button>
-            </li>
-            <li>
-              <button type="button" name="aspect-video" onClick={getAspectRatioName}>aspect-video</button>
-            </li>
-          </ul>
-        </article>
-      </section>
+      <main>
+        <Nav/>
+        <div className={cx('main-content')}>
+          <Outlet/>
+        </div>
+      </main>
   )
 }
 
