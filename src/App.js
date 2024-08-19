@@ -1,11 +1,11 @@
-import Home from "pages/home";
+import Router from "router";
 import 'assets/scss/common.scss';
 import 'assets/scss/style.scss';
 
 function App() {
   return (
     <div className="App">
-      <Home />
+      <Router />
     </div>
   );
 }
