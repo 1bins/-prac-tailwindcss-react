@@ -1,5 +1,43 @@
-main {
-  .main-content {
+@import '../../assets/scss/common.scss';
 
+main {
+  position: relative;
+  height: 100vh;
+  background: #e8fdfb;
+  overflow: hidden;
+  z-index: 2;
+  
+  &:before, &:after {
+    position: absolute;
+    bottom: -40%;
+    left: -24%;
+    content: '';
+    width: 46.87%;
+    min-width: 75rem;
+    aspect-ratio: 1/1;
+    background: #69c9d6;
+    border-radius: 100%;
+    z-index: -1;
+  }
+
+  &:after {
+    bottom: auto;
+    top: -40%;
+    left: auto;
+    right: -24%;
+    background: #fb8886;
+  }
+
+  .main {
+    width: 86%;
+    min-width: 1080px;
+    overflow-x: hidden;
+  }
+
+  .main-content {
+    width: 84%;
+    max-height: $container;
+    overflow: auto;
+    background: #f5f7fb;
   }
 }
